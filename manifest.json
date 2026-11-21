@@ -1,0 +1,19 @@
+{
+  "name": "قسط‌یار",
+  "short_name": "قسط‌یار",
+  "description": "مدیریت اقساط و یادآوری سررسید",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f6f5",
+  "theme_color": "#0e4d45",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0e4d45">
+<meta name="description" content="مدیریت اقساط و یادآوری سررسید">
+<title>قسط‌یار | مدیریت اقساط</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="header-inner">
+    <h1>قسط‌یار</h1>
+    <span class="today" id="todayLabel">—</span>
+  </div>
+</header>
+
+<main>
+  <!-- فرم ثبت وام -->
+  <section class="card" id="formCard">
+    <h2>ثبت وام جدید</h2>
+    <form id="loanForm">
+      <div class="field">
+        <label for="bank">بانک</label>
+        <input type="text" id="bank" placeholder="مثلاً بانک ملت" required>
+      </div>
+      <div class="field">
+        <label for="amount">مبلغ هر قسط (تومان)</label>
+        <input type="text" id="amount" inputmode="numeric" placeholder="مثلاً ۲,۵۰۰,۰۰۰" required>
+      </div>
+      <div class="field">
+        <label for="count">تعداد اقساط</label>
+        <input type="text" id="count" inputmode="numeric" placeholder="مثلاً ۱۲" required>
+      </div>
+      <div class="field row3">
+        <div>
+          <label for="startDate">تاریخ شروع (قسط اول)</label>
+          <select id="sdDay" required></select>
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <select id="sdMonth" required></select>
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <select id="sdYear" required></select>
+        </div>
+      </div>
+      <p class="hint">قسط‌ها هر ماه، در همان روزِ ماهِ قسط اول محاسبه می‌شوند.</p>
+      <button type="submit" class="btn primary">افزودن و ذخیره اقساط</button>
+    </form>
+  </section>
+
+  <!-- لیست وام‌ها -->
+  <section id="plans"></section>
+
+  <!-- خالی بودن -->
+  <section class="empty" id="emptyState">
+    <p>هنوز وامی ثبت نشده است.<br>از فرم بالا اولین وام خود را اضافه کنید.</p>
+  </section>
+
+  <footer class="app-footer">
+    <p>اطلاعات شما فقط روی همین دستگاه ذخیره می‌شود و جایی ارسال نمی‌شود.</p>
+  </footer>
+</main>
+
+<div class="toast" id="toast"></div>
+<script src="js/jalali.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

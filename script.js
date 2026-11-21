@@ -275,6 +275,14 @@ function initForm() {
 
 /* ---------- شروع ---------- */
 (function init() {
+  try {
+    if (typeof Jalali === 'undefined') throw new Error('jalali not loaded');
+  } catch (err) {
+    document.getElementById('emptyState').innerHTML =
+      '<p>خطا در بارگذاری صفحه. لطفاً صفحه را نوسازی کنید.</p>';
+    setTimeout(function () { location.reload(true); }, 1500);
+    return;
+  }
   var t = todayJalali();
   document.getElementById('todayLabel').textContent = 'امروز ' + toFa(t.jd) + ' ' + MONTH_NAMES[t.jm - 1] + ' ' + toFa(t.jy);
   initDateSelects();

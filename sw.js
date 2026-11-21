@@ -1,4 +1,4 @@
-const CACHE = 'ghostyar-v1';
+const CACHE = 'ghostyar-v2';
 const ASSETS = ['./', './index.html', './style.css', './script.js', './js/jalali.js', './manifest.json', './icon.svg', './fonts.css', './fonts/Vazirmatn-Regular.ttf', './fonts/Vazirmatn-Bold.ttf'];
 
 self.addEventListener('install', (e) => {
